@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row d-flex justify-content-center mb-5">
+        <button type="button" class="btn btn-lg btn-outline-success" routerLink="/cadastrar">Cadastrar</button>
+    </div>
+
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">SKU</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor= 'let registro of listaRegistros'>
+                <th scope="row">{{registro.id}}</th>
+                <td>{{registro.name}}</td>
+                <td>R$ {{registro.price}}</td>
+                <td class="d-flex justify-content-around align-items-center">
+                    {{registro.sku}}
+                  <a class="btn btn-sm btn-outline-danger ml-3" (click)="deletarRegistro(registro.id)" >Apagar</a>
+                </td>
+              </tr>
+    
+            </tbody>
+          </table>
+    </div>
+</div>

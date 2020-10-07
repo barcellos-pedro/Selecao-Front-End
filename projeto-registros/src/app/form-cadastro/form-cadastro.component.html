@@ -1,0 +1,21 @@
+<div class="container-fluid d-flex justify-content-center">
+    <div class="row mt-5">
+        <form class="">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="registro.name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input type="text" class="form-control" id="price" [(ngModel)]="registro.price" name="price">
+            </div>
+            <div class="form-group">
+                <label for="sku">Sku</label>
+                <input type="text" class="form-control" id="sku" [(ngModel)]="registro.sku" name="sku">
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success" (click)="cadastrarRegistro()">Cadastrar</button>
+              </div>
+          </form>
+    </div>
+</div>
